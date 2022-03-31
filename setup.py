@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 	
 setup(
     name='datatile',
-    packages=find_packages(include=['datatile']),
+    packages=find_packages(include=['datatile', 'datatile/summary']),
     version='0.2.0',
 	author='Polyaxon, Inc',
     description='A data catalog, summary, viz, and profiling package.',
