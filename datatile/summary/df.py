@@ -194,7 +194,7 @@ class DataFrameSummary(object):
         stats['max'] = series.max()
         stats['mode'] = series.mode()
         if len(stats['mode']) > 1:
-            stats['mode'] = mode.median()
+            stats['mode'] = stats['mode'].median()
 
         for x in np.array([0.05, 0.25, 0.5, 0.75, 0.95]):
             stats[self._percent(x)] = series.quantile(x)
